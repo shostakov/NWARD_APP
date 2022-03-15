@@ -1,1 +1,47 @@
-<mxfile host="app.diagrams.net" modified="2022-03-14T20:27:17.409Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="jlY0BqdoDk407t4Uz2Q6" version="16.6.5" type="github"><diagram id="fWXTHjYfmPbfMae1NFqq" name="Page-1">zZbBbqMwEIafhuNKYAKlxybpZittD6us2mPl4Cl4azzImIX06WvAhFASNTlkN1IO9j8z9vibsYnjL7J6pWiePiID4RCX1Y6/dAjxZoQ4zc9l2065Ca2QKM6s0yCs+TtY0bVqyRkUI0eNKDTPx2KMUkKsRxpVCqux2yuK8a45TWAirGMqpuozZzrt1ChwB/0H8CTtd/Zca8lo72yFIqUMqz3Jv3f8hULU3SirFyAaeD2XLu77EesuMQVSnxIAs9tfT3UdRH/uiufHl4en1ebtm13lLxWlPbBNVm97AkXFM0Glmc0LTZW2NXLN3AaD0lAfzcrbndU0CWAGWm2Niw2YWTrb8bQaWJPIauke51kvUlvfZLfygMAMLIUziJAJkZ+Y4ISKSjHblGbzeZVyDeucxo2lMrfAaKnOzKZL71RGx2tzFFw0BkfcKTmPHCB3MXDh/26lgFxbL91cTS+F5/TSAXD/tpWiQ9y4bFMyGRF3hZgYehOQWEoGzNK6Dpj+qTTDS9G8ndB8kFqZNnR/Q60nEHUjjkhRwRNpxrHBAsoIDTRuvpF31pBxxprwuYKCv9ON6G91jlzq9jzB3AmWzVqlxqK79l77DCh8gwUKNOsuJbZvwysX4pN0qWJ53tfPaHigWOT8Ypnp8LFvbXt/mfz7Dw==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-03-15T16:18:51.035Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="iQ2zC_0odDpNO1hPLRge" version="17.1.2" type="github">
+  <diagram id="fWXTHjYfmPbfMae1NFqq" name="Page-1">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e49QVxx58jAsWM_IVGbk-1" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="280" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="e49QVxx58jAsWM_IVGbk-2" value="Logo" style="rhombus;whiteSpace=wrap;html=1;" parent="e49QVxx58jAsWM_IVGbk-1" vertex="1">
+          <mxGeometry x="80" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e49QVxx58jAsWM_IVGbk-6" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
+          <mxGeometry x="520" y="40" width="280" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="e49QVxx58jAsWM_IVGbk-7" value="Logo" style="rhombus;whiteSpace=wrap;html=1;" parent="e49QVxx58jAsWM_IVGbk-6" vertex="1">
+          <mxGeometry x="80" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e49QVxx58jAsWM_IVGbk-8" value="Login with Google" style="rounded=1;whiteSpace=wrap;html=1;" parent="e49QVxx58jAsWM_IVGbk-6" vertex="1">
+          <mxGeometry x="80" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e49QVxx58jAsWM_IVGbk-9" value="Welcome to the NWA Roller Derby admin portal&lt;br&gt;&lt;br&gt;Please sign in below using your Google account" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="e49QVxx58jAsWM_IVGbk-6" vertex="1">
+          <mxGeometry x="5" y="210" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Js98XKPmlFPfCiV6TZOW-3" value="Splash screen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="10" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Js98XKPmlFPfCiV6TZOW-4" value="Login screen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="620" y="10" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Js98XKPmlFPfCiV6TZOW-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="e49QVxx58jAsWM_IVGbk-2" target="e49QVxx58jAsWM_IVGbk-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="350" as="sourcePoint" />
+            <mxPoint x="470" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="200" />
+              <mxPoint x="660" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Js98XKPmlFPfCiV6TZOW-6" value="Animate" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="Js98XKPmlFPfCiV6TZOW-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
