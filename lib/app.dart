@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hello_world/home.dart';
+import 'login.dart';
+import 'home.dart';
+import 'calendar.dart';
+
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: const Login(),
+      theme: ThemeData(
+          fontFamily: GoogleFonts.poppins().fontFamily,
+          backgroundColor: const Color.fromARGB(255, 179, 179, 179),
+          primaryColor: const Color.fromARGB(255, 53, 129, 170),
+          primaryColorDark: const Color.fromARGB(255, 48, 118, 156),
+          primaryColorLight: const Color.fromARGB(255, 99, 169, 207),
+          splashColor: const Color.fromARGB(255, 255, 156, 15),
+          hintColor: const Color.fromARGB(255, 16, 37, 55),
+          textTheme: Theme.of(context).textTheme.apply(
+              bodyColor: const Color.fromARGB(255, 16, 37, 55),
+              fontFamily: GoogleFonts.poppins().fontFamily),
+          appBarTheme: AppBarTheme(
+              backgroundColor: const Color.fromARGB(255, 48, 118, 156),
+              foregroundColor: Colors.white,
+              titleTextStyle: TextStyle(
+                fontFamily: GoogleFonts.poppins().fontFamily,
+                color: Colors.white,
+                fontSize: 24.0,
+              ))),
+    );
+  }
+}
