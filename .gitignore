@@ -3,4 +3,3 @@ NWARD_APP.code-workspace
 .flutter-plugins-dependencies
 .dart_tool/package_config.json
 .dart_tool/package_config_subset
-pubspec.lock
