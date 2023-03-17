@@ -14,7 +14,6 @@ class App extends StatelessWidget {
       home: const Login(),
       theme: ThemeData(
           fontFamily: GoogleFonts.poppins().fontFamily,
-          backgroundColor: const Color.fromARGB(255, 179, 179, 179),
           primaryColor: const Color.fromARGB(255, 53, 129, 170),
           primaryColorDark: const Color.fromARGB(255, 48, 118, 156),
           primaryColorLight: const Color.fromARGB(255, 99, 169, 207),
@@ -30,7 +29,19 @@ class App extends StatelessWidget {
                 fontFamily: GoogleFonts.poppins().fontFamily,
                 color: Colors.white,
                 fontSize: 24.0,
-              ))),
+              )),
+          colorScheme: const ColorScheme(
+              background: Color.fromARGB(255, 179, 179, 179),
+              brightness: Brightness.dark,
+              error: Colors.white,
+              onBackground: Colors.black,
+              onError: Colors.black,
+              onPrimary: Colors.black,
+              onSecondary: Colors.black,
+              onSurface: Colors.black,
+              primary: Color.fromARGB(255, 53, 129, 170),
+              secondary: Color.fromARGB(255, 255, 156, 15),
+              surface: Color.fromARGB(255, 16, 37, 55))),
     );
   }
 }
