@@ -1,186 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hello_world/calendar.dart';
-import 'package:syncfusion_flutter_calendar/calendar.dart';
-import 'event_data.dart';
-import 'main.dart';
-import 'dues.dart';
+import 'app_nav2.dart';
 
 class Home extends ConsumerWidget {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+  //final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+  //final GlobalKey<ScaffoldState> _scaffoldKey = scaffoldKey;
+
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    void onTabTapped(int index) {
-      ref.read(currentIndexProvider.state).state = index;
-      if (ref.read(currentIndexProvider.state).state == 4 &&
-          _scaffoldKey.currentState != null) {
-        _scaffoldKey.currentState!.openEndDrawer();
-      } else if (ref.read(currentIndexProvider.state).state == 2) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Calendar()),
-        );
-      } else if (ref.read(currentIndexProvider.state).state == 3) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Dues()),
-        );
-      }
-    }
+    wRef = ref;
+    buildContext = context;
+    final GlobalKey<ScaffoldState> newScaffoldKey = GlobalKey();
 
     return Scaffold(
-        key: _scaffoldKey,
+        key: newScaffoldKey,
         appBar: AppBar(
           title: const Text("Track Access"),
           backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
           foregroundColor: Theme.of(context).appBarTheme.foregroundColor,
-          actions: <Widget>[Container()],
+          actions: const [],
         ),
-        bottomNavigationBar: BottomNavigationBar(
-            onTap: onTabTapped,
-            currentIndex: ref.watch(currentIndexProvider),
-            selectedIconTheme:
-                IconThemeData(color: Theme.of(context).primaryColor),
-            unselectedIconTheme:
-                IconThemeData(color: Theme.of(context).hintColor),
-            type: BottomNavigationBarType.fixed,
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(icon: Icon(Icons.check), label: 'Attend'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.calendar_month), label: 'Calendar'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.monetization_on), label: 'Dues'),
-              BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'More'),
-            ]),
-        endDrawer: Drawer(
-          backgroundColor: Theme.of(context).primaryColor,
-          child: ListView(
-            children: [
-              DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                ),
-                child: const Text(''),
-              ),
-              ListTile(
-                title: Row(
-                  children: const [
-                    Icon(Icons.home),
-                    Text(
-                      ' Home',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
-                ),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              ListTile(
-                title: Row(
-                  children: const [
-                    Icon(Icons.check),
-                    Text(
-                      ' Attendance',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
-                ),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              ListTile(
-                title: Row(
-                  children: const [
-                    Icon(Icons.calendar_month),
-                    Text(
-                      ' Calendar',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
-                ),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              ListTile(
-                title: Row(
-                  children: const [
-                    Icon(Icons.monetization_on),
-                    Text(
-                      ' Dues',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
-                ),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              ListTile(
-                title: Row(
-                  children: const [
-                    Icon(Icons.access_time),
-                    Text(
-                      ' Volunteer Hours',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
-                ),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              ListTile(
-                title: Row(
-                  children: const [
-                    Icon(Icons.announcement),
-                    Text(
-                      ' Notifications',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
-                ),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              Visibility(
-                visible: ref.read(isAdminProvider.state).state,
-                child: ListTile(
-                  title: const Text(
-                    'Admin',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onTap: () {
-                    // Update the state of the app.
-                    // ...
-                  },
-                ),
-              )
-            ],
-          ),
-        ),
-        backgroundColor: Theme.of(context).backgroundColor,
+        bottomNavigationBar: const BottomMenu(),
+        drawer: const SideDrawer(),
+        backgroundColor: Theme.of(context).colorScheme.background,
         body: SingleChildScrollView(
           child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             Container(
               padding: const EdgeInsets.only(top: 20.0),
               child: const Hero(
+                tag: "logo",
                 child: Image(
                   image: AssetImage('assets/NSRD-12in.png'),
                   height: 100.0,
                 ),
-                tag: "logo",
               ),
             ),
             Container(

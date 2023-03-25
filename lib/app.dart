@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hello_world/home.dart';
 import 'login.dart';
-import 'home.dart';
-import 'calendar.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);

@@ -16,8 +16,8 @@ class Login extends StatelessWidget {
             const Expanded(
                 flex: 2,
                 child: Hero(
-                  child: Image(image: AssetImage('assets/NSRD-12in.png')),
                   tag: "logo",
+                  child: Image(image: AssetImage('assets/NSRD-12in.png')),
                 )),
             Expanded(
                 child: Container(
@@ -52,7 +52,7 @@ class Login extends StatelessWidget {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Home()),
+                                      builder: (context) => const Home()),
                                 );
                               },
                               style: ButtonStyle(
